@@ -1,7 +1,14 @@
 {
-    "title":"Blog Title",
-    "subTitle":"Blog description",
+    "title":"张三之博客",
+    "subTitle":"你咋找到的嘞",
     "avatarUrl":"https://github.githubassets.com/favicons/favicon.svg",
     "GMEEK_VERSION":"last",
-    "homeUrl":"https://liub.bbroot.com/"
+    "homeUrl":"https://liub.bbroot.com/",
+    "singlePage":["about"],
+    "iconList":{"music":"M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8Zm8-6.5a6.5 6.5 0 1 0 0 13 6.5 6.5 0 0 0 0-13Z"},
+    "exlink":{"music":"https://music.meekdai.com"},
+    "commentLabelColor":"#006b75",
+    "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
+    "i18n":"CN",
+    "UTC":8
 }
