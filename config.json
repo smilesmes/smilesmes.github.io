@@ -10,5 +10,6 @@
     "commentLabelColor":"#006b75",
     "yearColorList":["#bc4c00", "#0969da", "#1f883d", "#A333D0"],
     "i18n":"CN",
-    "UTC":8
+    "UTC":8,
+    "script":"<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/articletoc.js'></script>"   
 }
