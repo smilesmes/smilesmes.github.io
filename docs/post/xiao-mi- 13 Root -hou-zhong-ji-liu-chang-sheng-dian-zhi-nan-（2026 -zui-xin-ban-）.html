@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html data-color-mode="light" data-dark-theme="dark_colorblind" data-light-theme="light" lang="zh-CN">
+<head>
+    <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link href='https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/Primer/21.0.7/primer.css' rel='stylesheet' />
+    <script src='https://blog.meekdai.com/Gmeek/plugins/GmeekVercount.js'></script>
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg"><script>
+        let theme = localStorage.getItem("meek_theme") || "light";
+        document.documentElement.setAttribute("data-color-mode", theme);
+    </script>
+<meta name="description" content="# 小米 13 Root 后终极流畅省电教程（2026 最新版）
+
+> **前言：** 骁龙 8 Gen2 本身就是能效比极高的神 U，通过正确的优化，你的小米 13 可以实现中度使用亮屏 8-10 小时，待机一晚耗电 1-2%，日常使用丝滑无卡顿，同时保留所有核心功能。">
+<meta property="og:title" content="小米 13 Root 后终极流畅省电指南（2026 最新版）">
+<meta property="og:description" content="# 小米 13 Root 后终极流畅省电教程（2026 最新版）
+
+> **前言：** 骁龙 8 Gen2 本身就是能效比极高的神 U，通过正确的优化，你的小米 13 可以实现中度使用亮屏 8-10 小时，待机一晚耗电 1-2%，日常使用丝滑无卡顿，同时保留所有核心功能。">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://liub.bbroot.com//post/xiao-mi-%2013%20Root%20-hou-zhong-ji-liu-chang-sheng-dian-zhi-nan-%EF%BC%882026%20-zui-xin-ban-%EF%BC%89.html">
+<meta property="og:image" content="">
+<title>小米 13 Root 后终极流畅省电指南（2026 最新版）</title>
+
+
+
+</head>
+<style>
+body{box-sizing: border-box;min-width: 200px;max-width: 900px;margin: 20px auto;padding: 45px;font-size: 16px;font-family: sans-serif;line-height: 1.25;}
+#header{display:flex;padding-bottom:8px;border-bottom: 1px solid var(--borderColor-muted, var(--color-border-muted));margin-bottom: 16px;}
+#footer {margin-top:64px; text-align: center;font-size: small;}
+
+</style>
+
+<style>
+.postTitle{margin: auto 0;font-size:40px;font-weight:bold;}
+.title-right{display:flex;margin:auto 0 0 auto;}
+.title-right .circle{padding: 14px 16px;margin-right:8px;}
+#postBody{border-bottom: 1px solid var(--color-border-default);padding-bottom:36px;}
+#postBody hr{height:2px;}
+#cmButton{height:48px;margin-top:48px;}
+#comments{margin-top:64px;}
+.g-emoji{font-size:24px;}
+@media (max-width: 600px) {
+    body {padding: 8px;}
+    .postTitle{font-size:24px;}
+}
+
+</style>
+
+
+
+
+<body>
+    <div id="header">
+<h1 class="postTitle">小米 13 Root 后终极流畅省电指南（2026 最新版）</h1>
+<div class="title-right">
+    <a href="https://liub.bbroot.com/" id="buttonHome" class="btn btn-invisible circle" title="首页">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathHome" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+    <a href="https://github.com/smilesmes/smilesmes.github.io/issues/6" target="_blank" class="btn btn-invisible circle" title="Issue">
+        <svg class="octicon" width="16" height="16">
+            <path id="pathIssue" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+    
+
+    <a class="btn btn-invisible circle" onclick="modeSwitch();" title="切换主题">
+        <svg class="octicon" width="16" height="16" >
+            <path id="themeSwitch" fill-rule="evenodd"></path>
+        </svg>
+    </a>
+
+</div>
+</div>
+    <div id="content">
+<div class="markdown-body" id="postBody"><h1>小米 13 Root 后终极流畅省电教程（2026 最新版）</h1>
+<blockquote>
+<p><strong>前言：</strong> 骁龙 8 Gen2 本身就是能效比极高的神 U，通过正确的优化，你的小米 13 可以实现中度使用亮屏 8-10 小时，待机一晚耗电 1-2%，日常使用丝滑无卡顿，同时保留所有核心功能。</p>
+</blockquote>
+<hr>
+<h2><g-emoji class="g-emoji" alias="warning">⚠️</g-emoji> 重要前置提醒</h2>
+<ol>
+<li><strong>完整备份所有数据</strong>：建议使用小米云服务 + 本地备份（电脑端小米助手）双备份。</li>
+<li><strong>确保 Magisk 版本 ≥ 27.0</strong>：开启 Zygisk 模式，这是所有模块正常工作的基础。</li>
+<li><strong>永久禁用系统自动更新</strong>：设置 → 我的设备 → 系统更新 → 右上角设置 → 关闭“自动下载”和“自动安装”，同时在 Magisk 中屏蔽系统更新应用的 Root 检测。</li>
+</ol>
+<hr>
+<h2>一、 系统选择（决定 80% 的体验）</h2>
+<h3>🏆 首选：官方澎湃 OS 3.0 精简优化版</h3>
+<ul>
+<li><strong>推荐理由</strong>：2026 年 3 月刚推送，底层重构，对小米 13 优化极佳，流畅度和续航远超 MIUI14 和早期 HyperOS。</li>
+<li><strong>获取方式</strong>：先升级到官方稳定版，再刷入 HyperOS Tweaker 模块进行系统级精简。</li>
+<li><strong>优势</strong>：完美兼容所有小米功能（相机、NFC、红外、小爱同学），稳定性最高。</li>
+</ul>
+<h3>🥈 备选：类原生 ROM（追求极致纯净）</h3>
+<ul>
+<li><strong>LineageOS 22</strong>：最稳定的类原生，干净无广告，续航极佳。</li>
+<li><strong>RisingOS 10</strong>：功能丰富，自定义程度高，调度更合理。</li>
+<li><strong>注意</strong>：类原生会丢失部分小米专属功能（如徕卡相机、小米互传）。</li>
+</ul>
+<hr>
+<h2>二、 必装 Magisk 模块（按优先级排序）</h2>
+<h3>🔧 基础核心模块</h3>
+<ol>
+<li><strong>LSPosed (Zygisk 版)</strong>：所有 Xposed 模块的运行框架。开启“资源钩子”，其他保持默认。</li>
+<li><strong>Shamiko</strong>：隐藏 Root，绕过银行、支付、游戏等应用的检测。在 Magisk 设置中关闭“Enforce DenyList”，Shamiko 会自动工作。</li>
+<li><strong>Universal SafetyNet Fix</strong>：修复 Google 安全认证，解决应用闪退问题。建议搭配 Play Integrity Fix 模块。</li>
+</ol>
+<h3>⚡ 流畅省电核心模块</h3>
+<ol start="4">
+<li><strong>HyperCeiler (嗨西露)</strong>：必装！小米系统全能工具箱。
+<ul>
+<li><strong>系统优化</strong>：关闭“系统日志”、“用户体验计划”、“广告服务”。</li>
+<li><strong>性能</strong>：关闭“Joyose 云控”、开启“温控阈值提高 5℃”。</li>
+<li><strong>显示</strong>：开启“DC 调光”、开启“强制 120Hz 全局高刷”。</li>
+<li><strong>内存</strong>：关闭“内存扩展”、调整 LMK 参数为“激进模式”。</li>
+</ul>
+</li>
+<li><strong>NoActive (墓碑机制)</strong>：彻底冻结后台应用，省电效果立竿见影。
+<ul>
+<li><strong>白名单</strong>：微信、QQ、音乐、导航、<strong>代理工具 (Clash/v2rayNG)</strong>、<strong>Termux</strong>。</li>
+<li><strong>设置</strong>：开启“后台播放/常驻通知白名单”、“禁止应用自启”和“禁止相互唤醒”。</li>
+</ul>
+</li>
+<li><strong>App Ops</strong>：精细化管理权限。批量禁用所有应用的“获取位置”、“读取手机状态”、“后台运行”，仅在需要时开启。</li>
+</ol>
+<h3>🔋 电池与充电优化</h3>
+<ol start="7">
+<li><strong>Advanced Charging Controller (ACC) + AccA</strong>：自定义充电策略。
+<ul>
+<li><strong>推荐</strong>：充电至 80% 停止，20% 开始充电。</li>
+<li><strong>极客推荐</strong>：开启 <strong>“闲置模式” (Idle Mode)</strong>，插线调试 Node.js 时电流绕过电池直供主板。</li>
+</ul>
+</li>
+<li><strong>Naptime</strong>：增强系统休眠，开启“激进休眠模式”。</li>
+</ol>
+<hr>
+<h2>三、 系统深度设置优化</h2>
+<h3>📱 显示设置</h3>
+<ul>
+<li><strong>亮度</strong>：开启自动亮度，滑块调至中间偏下。</li>
+<li><strong>分辨率</strong>：FHD+（小米 13 屏幕尺寸下比 2K 省电且肉眼无差别）。</li>
+<li><strong>深色模式</strong>：全天开启。</li>
+<li><strong>息屏显示</strong>：关闭或定时开启。</li>
+</ul>
+<h3>🔋 电池设置</h3>
+<ul>
+<li><strong>电池模式</strong>：<strong>均衡模式</strong>（切勿开启省电模式，会导致卡顿）。</li>
+<li><strong>后台管理</strong>：所有应用设为“限制后台活动”（白名单除外）。</li>
+<li><strong>关闭项</strong>：关闭“电池健康”、“智能充电”、“智能场景省电”（减少无效后台轮询）。</li>
+</ul>
+<h3>📶 网络设置</h3>
+<ul>
+<li><strong>移动网络</strong>：关闭“5G 智能切换”，根据信号常驻 4G 或 5G。</li>
+<li><strong>无线连接</strong>：关闭“Wi-Fi 助理”、“随时都可扫描”。</li>
+<li><strong>传感器</strong>：蓝牙/NFC 不用时关闭；位置信息设为“仅使用时允许”。</li>
+</ul>
+<h3>✨ 动画与流畅度 (开发者选项)</h3>
+<ul>
+<li><strong>动画缩放</strong>：窗口、过渡、时长全部设为 <strong>0.5x</strong>。</li>
+<li><strong>渲染加速</strong>：强制 GPU 渲染开启。</li>
+<li><strong>进程限制</strong>：后台进程限制不超过 4 个。</li>
+<li><strong>关闭项</strong>：关闭“日志记录器缓冲区大小”、关闭“USB 调试”（用完即关）。</li>
+</ul>
+<hr>
+<h2>四、 应用管理与系统精简</h2>
+<h3>🗑️ 可安全卸载 (直接长按)</h3>
+<p>小米视频、小米音乐、小米直播、游戏中心、自带浏览器、钱包、天气、计算器、笔记、录音机（建议替换为更轻量的第三方应用，如 Via 浏览器、Solid Explorer）。</p>
+<h3>❄️ 需 Root 冻结 (使用冰箱/小黑屋)</h3>
+<ul>
+<li>MSA 智能服务、Analytics 数据分析、智能服务框架。</li>
+<li>快应用服务框架、打印服务、投屏服务、所有游戏/广告相关服务。</li>
+</ul>
+<hr>
+<h2>五、 进阶内核与调度优化（极客必备）</h2>
+<h3>🌙 推荐内核：Pandora Kernel for Xiaomi 13</h3>
+<ul>
+<li>使用 Kernel Flasher 刷入镜像。</li>
+</ul>
+<h3>⚙️ 调度设置 (EX Kernel Manager)</h3>
+<ul>
+<li><strong>CPU 调度器</strong>：<code class="notranslate">schedutil</code>。</li>
+<li><strong>超大核 (X3)</strong>：最大频率限制在 <strong>2.8GHz</strong>（降低 400MHz 对性能几乎无感，但能显著降低发热）。</li>
+<li><strong>GPU 频率</strong>：最大频率限制在 <strong>600MHz</strong>（原 719MHz）。</li>
+<li><strong>I/O 调度器</strong>：改为 <strong><code class="notranslate">noop</code></strong>（最适合 UFS 4.0 闪存，提升碎文件处理速度）。</li>
+<li><strong>虚拟内存</strong>：<code class="notranslate">swappiness=10</code>，<code class="notranslate">vfs_cache_pressure=50</code>。</li>
+</ul>
+<hr>
+<h2>六、 最终效果验证</h2>
+<p>重启手机并静置 30 分钟。你应该看到：</p>
+<ul>
+<li><strong>待机</strong>：8 小时耗电 1-2%。</li>
+<li><strong>日常</strong>：刷社交软件每小时耗电 6-8%。</li>
+<li><strong>亮屏</strong>：中度使用 8-10 小时，轻度 12 小时+。</li>
+<li><strong>流畅度</strong>：应用秒开，多任务切换无掉帧。</li>
+</ul>
+<p>🚨 <strong>注意事项</strong>：模块不要一次性装太多，装一个测一个。如果电池健康度低于 80%，建议直接更换原厂电池。</p></div>
+<div style="font-size:small;margin-top:8px;float:right;">转载请注明出处</div>
+
+</div>
+    <div id="footer"><div id="footer1">Copyright © <span id="copyrightYear"></span> <a href="https://liub.bbroot.com/">张三之博客</a></div>
+<div id="footer2"><span id="filingNum"><a href="https://beian.miit.gov.cn/" target="_blank">浙ICP备20023628号</a> • </span>
+    <span id="runday"></span><span>Powered by <a href="https://meekdai.com/Gmeek.html" target="_blank">Gmeek</a></span>
+</div>
+
+<script>
+var now=new Date();
+document.getElementById("copyrightYear").innerHTML=now.getFullYear();
+
+if("04/09/2026"!=""){
+    var startSite=new Date("04/09/2026");
+    var diff=now.getTime()-startSite.getTime();
+    var diffDay=Math.floor(diff/(1000*60*60*24));
+    document.getElementById("runday").innerHTML="网站运行 "+diffDay+" 天"+" • ";
+}
+</script></div>
+</body>
+<script>
+var IconList={'sun': 'M8 10.5a2.5 2.5 0 100-5 2.5 2.5 0 000 5zM8 12a4 4 0 100-8 4 4 0 000 8zM8 0a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0V.75A.75.75 0 018 0zm0 13a.75.75 0 01.75.75v1.5a.75.75 0 01-1.5 0v-1.5A.75.75 0 018 13zM2.343 2.343a.75.75 0 011.061 0l1.06 1.061a.75.75 0 01-1.06 1.06l-1.06-1.06a.75.75 0 010-1.06zm9.193 9.193a.75.75 0 011.06 0l1.061 1.06a.75.75 0 01-1.06 1.061l-1.061-1.06a.75.75 0 010-1.061zM16 8a.75.75 0 01-.75.75h-1.5a.75.75 0 010-1.5h1.5A.75.75 0 0116 8zM3 8a.75.75 0 01-.75.75H.75a.75.75 0 010-1.5h1.5A.75.75 0 013 8zm10.657-5.657a.75.75 0 010 1.061l-1.061 1.06a.75.75 0 11-1.06-1.06l1.06-1.06a.75.75 0 011.06 0zm-9.193 9.193a.75.75 0 010 1.06l-1.06 1.061a.75.75 0 11-1.061-1.06l1.06-1.061a.75.75 0 011.061 0z', 'moon': 'M9.598 1.591a.75.75 0 01.785-.175 7 7 0 11-8.967 8.967.75.75 0 01.961-.96 5.5 5.5 0 007.046-7.046.75.75 0 01.175-.786zm1.616 1.945a7 7 0 01-7.678 7.678 5.5 5.5 0 107.678-7.678z', 'sync': 'M1.705 8.005a.75.75 0 0 1 .834.656 5.5 5.5 0 0 0 9.592 2.97l-1.204-1.204a.25.25 0 0 1 .177-.427h3.646a.25.25 0 0 1 .25.25v3.646a.25.25 0 0 1-.427.177l-1.38-1.38A7.002 7.002 0 0 1 1.05 8.84a.75.75 0 0 1 .656-.834ZM8 2.5a5.487 5.487 0 0 0-4.131 1.869l1.204 1.204A.25.25 0 0 1 4.896 6H1.25A.25.25 0 0 1 1 5.75V2.104a.25.25 0 0 1 .427-.177l1.38 1.38A7.002 7.002 0 0 1 14.95 7.16a.75.75 0 0 1-1.49.178A5.5 5.5 0 0 0 8 2.5Z', 'home': 'M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z', 'github': 'M8 0c4.42 0 8 3.58 8 8a8.013 8.013 0 0 1-5.45 7.59c-.4.08-.55-.17-.55-.38 0-.27.01-1.13.01-2.2 0-.75-.25-1.23-.54-1.48 1.78-.2 3.65-.88 3.65-3.95 0-.88-.31-1.59-.82-2.15.08-.2.36-1.02-.08-2.12 0 0-.67-.22-2.2.82-.64-.18-1.32-.27-2-.27-.68 0-1.36.09-2 .27-1.53-1.03-2.2-.82-2.2-.82-.44 1.1-.16 1.92-.08 2.12-.51.56-.82 1.28-.82 2.15 0 3.06 1.86 3.75 3.64 3.95-.23.2-.44.55-.51 1.07-.46.21-1.61.55-2.33-.66-.15-.24-.6-.83-1.23-.82-.67.01-.27.38.01.53.34.19.73.9.82 1.13.16.45.68 1.31 2.69.94 0 .67.01 1.3.01 1.49 0 .21-.15.45-.55.38A7.995 7.995 0 0 1 0 8c0-4.42 3.58-8 8-8Z'};
+var utterancesLoad=0;
+
+let themeSettings={
+    "dark": ["dark","moon","#00f0ff","dark-blue"],
+    "light": ["light","sun","#ff5000","github-light"],
+    "auto": ["auto","sync","","preferred-color-scheme"]
+};
+function changeTheme(mode, icon, color, utheme){
+    document.documentElement.setAttribute("data-color-mode",mode);
+    document.getElementById("themeSwitch").setAttribute("d",value=IconList[icon]);
+    document.getElementById("themeSwitch").parentNode.style.color=color;
+    if(utterancesLoad==1){utterancesTheme(utheme);}
+}
+function modeSwitch(){
+    let currentMode=document.documentElement.getAttribute('data-color-mode');
+    let newMode = currentMode === "light" ? "dark" : currentMode === "dark" ? "auto" : "light";
+    localStorage.setItem("meek_theme", newMode);
+    if(themeSettings[newMode]){
+        changeTheme(...themeSettings[newMode]);
+    }
+}
+function utterancesTheme(theme){
+    const message={type:'set-theme',theme: theme};
+    const iframe=document.getElementsByClassName('utterances-frame')[0];
+    iframe.contentWindow.postMessage(message,'https://utteranc.es');
+}
+if(themeSettings[theme]){changeTheme(...themeSettings[theme]);}
+console.log("\n %c Gmeek last https://github.com/Meekdai/Gmeek \n","padding:5px 0;background:#02d81d;color:#fff");
+</script>
+
+<script>
+document.getElementById("pathHome").setAttribute("d",IconList["home"]);
+document.getElementById("pathIssue").setAttribute("d",IconList["github"]);
+
+
+
+
+
+
+</script>
+<script src='https://blog.meekdai.com/Gmeek/plugins/GmeekTOC.js'></script><script src='https://blog.meekdai.com/Gmeek/plugins/lightbox.js'></script>
+
+</html>
